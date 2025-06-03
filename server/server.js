@@ -10,8 +10,8 @@ const MONGODB_CONNECTION_STRING = process.env.MONGODB_CONNECTION_STRING;
 
 const app = express();
 
-// mongoose.connect(MONGODB_CONNECTION_STRING)
-//     .then(() => console.log("connected to mongodb"));
+mongoose.connect(MONGODB_CONNECTION_STRING)
+    .then(() => console.log("connected to mongodb"));
 
 // middleware
 app.use(cors());
