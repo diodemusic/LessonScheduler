@@ -1,6 +1,7 @@
 require("dotenv").config();
 const morgan = require("morgan");
 const healthRoutes = require("./src/routes/health.route");
+const moduleRoutes = require("./src/routes/module.route");
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
@@ -20,6 +21,7 @@ app.use(morgan("dev"));
 
 // mount routers
 app.use("/api/health", healthRoutes);
+app.use("/api/module", moduleRoutes);
 
 // start listening
 app.listen(PORT, () => {
