@@ -2,16 +2,12 @@ const mongoose = require('mongoose');
 
 const LessonSchema = mongoose.Schema(
     {
-        module: {
+        moduleRef: {
             type: String,
             required: true
         },
-        topicNum: {
-            type: Number,
-            required: true
-        },
-        lessonNum: {
-            type: Number,
+        title: {
+            type: String,
             required: true
         },
         finished: {
@@ -21,6 +17,6 @@ const LessonSchema = mongoose.Schema(
     }
 );
 
-const Lesson = mongoose.model("Lesson", LessonSchema)
+const Lesson = mongoose.model("Lesson", LessonSchema);
 
 module.exports = Lesson;

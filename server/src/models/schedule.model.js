@@ -1,19 +1,17 @@
 const mongoose = require('mongoose');
-const Lesson = require('./lesson.model');
 
 const ScheduleSchema = mongoose.Schema(
     {
-        week: {
-            type: Number,
+        lessons: {
+            type: [], // TODO: define what type the array holds
             required: true
         },
-        lessons: {
-            type: [Lesson],
-            required: true
+        weekNumber: {
+            type: Number
         }
     }
 );
 
-const Schedule = mongoose.model("Schedule", ScheduleSchema)
+const Schedule = mongoose.model("Schedule", ScheduleSchema);
 
 module.exports = Schedule;
