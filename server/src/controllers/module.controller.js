@@ -10,6 +10,19 @@ async function getModules(req, res) {
     }
 }
 
+async function postModule(req, res) {
+    try {
+        const module = new Module(req.body);
+
+        await module.save();
+
+        res.status(201).send({ module });
+    } catch (error) {
+        res.status(400).end({ message: error.message });
+    }
+}
+
 module.exports = {
-    getModules
+    getModules,
+    postModule
 };
