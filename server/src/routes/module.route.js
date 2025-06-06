@@ -4,6 +4,6 @@ const { getModules, postModule, deleteModule } = require("../controllers/module.
 
 router.get("/", getModules);
 router.post("/", postModule);
-router.delete("/", deleteModule);
+router.delete("/:id", deleteModule);
 
 module.exports = router;
