@@ -23,7 +23,7 @@ app.use(morgan("dev"));
 // mount routers
 app.use("/api/health", healthRoutes);
 app.use("/api/module", moduleRoutes);
-app.use("api/schedule", scheduleRoutes);
+app.use("/api/schedule", scheduleRoutes);
 
 // start listening
 app.listen(PORT, () => {
